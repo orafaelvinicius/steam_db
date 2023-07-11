@@ -9,10 +9,10 @@ Realizar a extração das informações que conseguir da base de dados listada n
 ## Problemas encontrados:
 
 A plataforma steamdb conta com camadas de proteção contra raspagem dos seus dados, a própria plataforma deixa explícito que não apoia este tipo de prática. Para contornar este problema, utilizei algumas abordagens como:
-    * Alteração do cabeçalho das requisições para passar pela proteção
-    * lib oficial da Steam
-    * API oficial da Steam (recomendado pela plataforma steamdb)
-    * Raspagem através do endpoint secundário (/instantsearch/) fornecido pela plataforma
+    - Alteração do cabeçalho das requisições para passar pela proteção
+    - lib oficial da Steam
+    - API oficial da Steam (recomendado pela plataforma steamdb)
+    - Raspagem através do endpoint secundário (/instantsearch/) fornecido pela plataforma
 
 ### Resumo da abordagem escolhida
 
@@ -33,8 +33,13 @@ Para executar a aplicação, você precisa do arquivo com credenciais para acess
 ## Execução:
 
 Para executar a aplicação, você pode:
-Acessar a pasta "script" e executar o comando
-`python3 main.py`
-ou executar o comando:
-`docker build -t scraping-app .`
-`docker run -d scraping-app`
+executar os comandos
+```sh
+cd script
+python3 main.py
+```
+ou executar os comandos:
+```sh
+docker build -t scraping-app .
+docker run -d scraping-app
+```
