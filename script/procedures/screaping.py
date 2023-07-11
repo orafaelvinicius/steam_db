@@ -128,9 +128,10 @@ class Steamdb:
         
     def export_to_json(self, filename):
         print('Criando arquivo json...')
-        # self.df_init.to_json(filename,orient="index")
-        self.df_init.to_json(f'split_{filename}',orient="split") 
-        self.df_init.to_json(f'records_{filename}',orient="records") 
+        df = self.df_init
+        df['release_date'] = df['release_date'].dt.strftime('%Y-%m-%d')
+        df.to_json(f'records_{filename}',orient="records") 
+        df.to_json(f'split_{filename}',orient="split") 
 
     def export_to_parquet(self, filename):
         print('Criando arquivo parquet...')
@@ -149,7 +150,7 @@ class Steamdb:
 if __name__ == '__main__':
     steam = Steamdb()
     steam_return = steam.run()
-    print(type(steam_return))
+    # print(type(steam_return))
 
 
 
