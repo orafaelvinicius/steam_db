@@ -3,7 +3,7 @@ import requests
 import json
 import pandas as pd
 
-with open('/home/beanalytic/beanalytic_case/data/key_secret.json') as file:
+with open('./data/key_secret.json') as file:
     data_json = json.load(file)
 
 steam_key = data_json['KEY_STEAM_API']

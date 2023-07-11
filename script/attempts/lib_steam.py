@@ -2,7 +2,7 @@ from steam.webapi import WebAPI
 
 
 import json
-with open('/home/beanalytic/beanalytic_case/data/key_secret.json') as file:
+with open('./data/key_secret.json') as file:
     data_json = json.load(file)
 KEY_ANTI_CAPTCHA = data_json['KEY_ANTI_CAPTCHA']
 
