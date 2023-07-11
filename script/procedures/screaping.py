@@ -130,7 +130,7 @@ class Steamdb:
         print('Criando arquivo json...')
         df = self.df_init
         df['release_date'] = df['release_date'].dt.strftime('%Y-%m-%d')
-        df.to_json(f'records_{filename}',orient="records") 
+        # df.to_json(f'records_{filename}',orient="records") 
         df.to_json(f'split_{filename}',orient="split") 
 
     def export_to_parquet(self, filename):
