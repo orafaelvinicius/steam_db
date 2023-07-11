@@ -42,7 +42,7 @@ def data_to_bigQuery():
     
     # print('Enviando dados com pandas to_gbq') 
     # df_excel.to_gbq(table_ref, project_id=KEYS.project_id, if_exists='replace')    
-    print('FIM DO PROGRAMA')
+
 
 
 
