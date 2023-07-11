@@ -29,7 +29,7 @@ Para executar a aplicação, você precisa do arquivo com credenciais para acess
 ## Execução:
 
 Para executar a aplicação, você pode:
-[Linux Ubuntu 20] executar os comandos
+executar os comandos [Linux Ubuntu 20]
 
 ```sh
 python3 -M venv venv
