@@ -89,12 +89,12 @@ def make_request():
                     rating.append(rating_value)
             
         
-            # for cell_ends_in in cells:
+        # for cell_ends_in in cells:
         #     print(f"cell_ends_in {cell_ends_in}")
         #     if 'timeago' in cell_ends_in.get('class', []):
         #         cell_text = cell_ends_in.text.strip()
         #         end_in.append(cell_text)
-            
+        
 
         
    
@@ -116,24 +116,7 @@ def make_request():
     # price_discount = soup.find_all('td', class_='price-discount-major')
 
     # list_games    = [ li.text for li in lineTable ]
-    dados_vazio = []
-    dados_tratado= []
-    auxiliar = []
-    
-
-    # for elemento in price_discount:
-    #     dados_vazio.append(elemento.parent.text)
-
-    # for dados in dados_vazio:
-    #     for dado in dados.split('\n'):
-    #         if dado != '':
-    #             auxiliar.append(dado)
-    #     dados_tratado.append(auxiliar)
-    #     auxiliar = []
-
    
-    # pprint(dados_tratado)
-
 
 
 
