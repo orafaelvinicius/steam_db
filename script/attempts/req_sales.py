@@ -80,13 +80,16 @@ def make_request():
                 price.append(price_value)
 
         for cell_rating in cells:
-    
-            if cell_rating.text.endswith('%'):
-                rating_value = cell_rating.text.split('%')
-                print(f"rating_value===={rating_value}")
-                rating.append(rating_value)
+            if 'price-discount-major' not in cell_rating.get('class', []) \
+                and 'price-discount' not in cell_rating.get('class', []):
 
-        # for cell_ends_in in cells:
+                if 'data-sort' in cell_rating.attrs and cell_rating.text.endswith('%'):
+                    rating_value = cell_rating.text.split('%')[0]
+                    # print(f"rating_value===={rating_value}")
+                    rating.append(rating_value)
+            
+        
+            # for cell_ends_in in cells:
         #     print(f"cell_ends_in {cell_ends_in}")
         #     if 'timeago' in cell_ends_in.get('class', []):
         #         cell_text = cell_ends_in.text.strip()
@@ -97,6 +100,7 @@ def make_request():
    
     # print(f" NOME DO GAME {name_game}")
     # print(f" price_discount {price_discount}")
+    print(f" rating {rating}")
     # print(f" end_in {end_in}")
                                  
 
