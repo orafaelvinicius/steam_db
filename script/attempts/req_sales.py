@@ -80,8 +80,11 @@ def make_request():
                 price.append(price_value)
 
         for cell_rating in cells:
+            # if 'price-discount-major' not in cell_rating.get('class', []) \
+            #     and 'price-discount' not in cell_rating.get('class', []):
             if 'price-discount-major' not in cell_rating.get('class', []) \
-                and 'price-discount' not in cell_rating.get('class', []):
+                    and 'price-discount' not in cell_rating.get('class', []) \
+                        and '' not in cell_rating.get('class', []):
 
                 if 'data-sort' in cell_rating.attrs and cell_rating.text.endswith('%'):
                     rating_value = cell_rating.text.split('%')[0]

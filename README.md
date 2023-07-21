@@ -1,6 +1,6 @@
-# Desafio técnico beAnalytic
+# Raspagem de dados (WebScreaping)
 
-Este desafio foi idealizado pela beAnalytic para realização do processo seletivo para o cargo de engenheiro de dados júnior.
+Esta aplicação tem o objetivo de realizar a extração, tratamento e carregamento do dados da página SteamDB que contém diversas informações sobre os jogos existentes na plataforma steam com preço, promoções, descontos entre outros.
 
 ## Desafio:
 
@@ -8,7 +8,14 @@ Realizar a extração das informações que conseguir da base de dados listada n
 
 ## Problemas encontrados:
 
-A plataforma steamdb conta com camadas de proteção contra raspagem dos seus dados, a própria plataforma deixa explícito que não apoia este tipo de prática. Para contornar este problema, utilizei algumas abordagens como: - Alteração do cabeçalho das requisições para passar pela proteção - lib oficial da Steam - API oficial da Steam (recomendado pela plataforma steamdb) - Raspagem através do endpoint secundário (/instantsearch/) fornecido pela plataforma
+A plataforma steamdb conta com camadas de proteção contra raspagem dos seus dados, a própria plataforma deixa explícito que não apoia este tipo de prática.
+
+Para contornar este problema, utilizei algumas abordagens como:
+
+- Alteração do cabeçalho das requisições para passar pela proteção
+- lib oficial da Steam
+- API oficial da Steam (recomendado pela plataforma steamdb)
+- Raspagem através do endpoint secundário (/instantsearch/) fornecido pela plataforma
 
 ### Resumo da abordagem escolhida
 
@@ -24,7 +31,7 @@ A abordagem escolhida foi a raspagem dos dados acessando através do endpoint se
 
 ### Requisitos:
 
-Para executar a aplicação, você precisa do arquivo com credenciais para acessar o Google Sheets e BigQuery, e também ter o Docker instalado.
+Além do ambiente configurado e/ou também ter o Docker instalado, para executar a aplicação, você precisa do arquivo com credenciais para acessar o Google Sheets e BigQuery. Estas credenciais serão obtidas através de uma [conta de serviços do Google](https://support.google.com/a/answer/7378726?hl=pt-BR)
 
 ## Execução:
 
@@ -45,3 +52,8 @@ ou executar os comandos:
 docker build -t scraping-app .
 docker run -d scraping-app
 ```
+
+links úteis:
+[steamdb](https://steamdb.info/sales/)
+[steamdb robots](https://steamdb.info/robots.txt)
+[API Steam](https://partner.steamgames.com/doc/webapi/ISteamApps)
