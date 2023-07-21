@@ -53,7 +53,43 @@ docker build -t scraping-app .
 docker run -d scraping-app
 ```
 
-links úteis:
+## Arquitetura
+
+```
+├── data
+│   ├── client_secret.json
+│   ├── exemple_client_secret.json
+│   ├── exemple_service_account.json
+│   ├── key_secret.json
+│   └── service_account.json
+├── Dockerfile
+├── requirements.txt
+└── script
+    ├── attempts
+    │   ├── api_steam.py
+    │   ├── force_antiCAPTCHA.py
+    │   ├── lib_steam.py
+    │   └── req_sales.py
+    ├── main.py
+    ├── procedures
+    │   ├── screaping.py
+    │   ├── send_to_big_query.py
+    │   └── send_to_sheets.py
+    └── token.json
+```
+
+### Descrição dos diretórios e arquivos
+
+- scripts
+  - attempts: Diretório responsável por armazenar todas as tentativas de realizar a tarefa
+  - procedures: Diretório responsável por armazenar todos os executores do main.py
+- data: Armazenar arquivos de credenciais
+
+- Dockerfile: Executor do docker
+- requirements.txt: Requerimentos da aplicação
+
+### links úteis:
+
 [steamdb](https://steamdb.info/sales/)
 [steamdb robots](https://steamdb.info/robots.txt)
 [API Steam](https://partner.steamgames.com/doc/webapi/ISteamApps)
