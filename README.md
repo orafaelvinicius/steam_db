@@ -1,4 +1,4 @@
-# Raspagem de dados (WebScreaping)
+# ETL SteamDB
 
 Esta aplicação tem o objetivo de realizar a extração, tratamento e carregamento do dados da página SteamDB que contém diversas informações sobre os jogos existentes na plataforma steam com preço, promoções, descontos entre outros.
 
