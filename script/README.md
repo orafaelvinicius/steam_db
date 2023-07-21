@@ -31,7 +31,7 @@ Diretório responsável por armazenar todos os arquivos necessários para rodar 
 - send_to_big_query.py: Responsável pelo envio de dados para o Big Query
 - send_to_sheets.py: Responsável pelo envio de dados para o planilhas do Google
 
-- api_steam.py: Arquivo utilizado para realizar o acesso às informações da Steam via API
-- force_antiCAPTCHA.py: Arquivo utilizado para realizar a quebra do CAPTCHA do steamdb
-- lib_steam.py: Arquivo utilizado para realizar a coleta dos dados através da biblioteca
-- req_sales.py: Arquivo utilizado para realizar a raspagem do steamdb com bs4
+  - api_steam.py: Arquivo utilizado para realizar o acesso às informações da Steam via API
+  - force_antiCAPTCHA.py: Arquivo utilizado para realizar a quebra do CAPTCHA do steamdb
+  - lib_steam.py: Arquivo utilizado para realizar a coleta dos dados através da biblioteca
+  - req_sales.py: Arquivo utilizado para realizar a raspagem do steamdb com bs4
