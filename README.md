@@ -90,6 +90,6 @@ docker run -d scraping-app
 
 ### links úteis:
 
-[steamdb](https://steamdb.info/sales/)
-[steamdb robots](https://steamdb.info/robots.txt)
-[API Steam](https://partner.steamgames.com/doc/webapi/ISteamApps)
+- [steamdb](https://steamdb.info/sales/)
+- [steamdb robots](https://steamdb.info/robots.txt)
+- [API Steam](https://partner.steamgames.com/doc/webapi/ISteamApps)
